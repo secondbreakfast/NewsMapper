@@ -1,0 +1,63 @@
+
+body {
+	background-color: #021019;
+}
+
+.navbar {
+  margin-bottom: 10px;
+  color: #FFBB06;
+  background-color: #082D4B;
+}
+
+.navbar-brand {
+  font-family: 'Megrim', cursive;
+  font-size: 50px;
+}
+
+
+.photocaption {
+  font-family: 'Overlock', cursive;
+  color: #082D4B;
+  text-align: center;
+  font-size: 50px;
+  position: relative;
+  background-color: #bdbdbd; 
+}
+
+.btn-circle {
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  padding: 7px 16px;
+  border: 2px solid #fff;
+  border-radius: 35px;
+  font-size: 40px;
+  color: #fff;
+  background: 0 0;
+}
+
+#map { 
+	height: 550px; 
+	width: 1140px;
+  float: none;
+  margin: 0 auto;
+}
+
+
+p {
+	color: #b26c00;
+}
+
+
+/* Set the fixed height of the footer here */
+#push,
+.footer {
+  height: 30px;
+}
+.footer {
+  background-color: #082D4B;
+  color: #FFBB06;
+  margin-top: 10px;
+}
+
+}
