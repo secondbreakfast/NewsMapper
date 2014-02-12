@@ -1,4 +1,4 @@
-//Need to build loops into this. It's just tested with the first result.
+//Would like it to pull more API's and data if I have time. Right now, not many valid data points appear. 
 
 $(document).ready(function () {
     init();
@@ -7,18 +7,18 @@ $(document).ready(function () {
 
 var i = 0;
 var gmapData = {};
-var locations = [];
+var newsSource = [];
+var topicRegion = [];
 var dataTemp;
 var mapElement;
 var map;
 var infowindow = new google.maps.InfoWindow();
 
-//Pull from other NY Times API's? Or Reuters?
 function init() {
 
     var mapOptions = {
         center: new google.maps.LatLng(0, 0),
-        zoom: 3,
+        zoom: 2,
         zoomControl: true,
         zoomControlOptions: {
             style: google.maps.ZoomControlStyle.DEFAULT,
@@ -161,18 +161,16 @@ function pullNews() {
 }
 
 function forceSync(gmapData){
-    //console.log(gmapData);
+
     for (i = 0; i < gmapData.results.length; i++){
         dataTemp = gmapData.results[i];
-    //console.log(dataTemp);
+
     geocode(i, dataTemp);
 }
-    // console.log(gmapData);
-
 }
 
 function geocode(i, dataTemp) {
-   // console.log(dataTemp); 
+
    var geocoder = new google.maps.Geocoder();
    geocoder.geocode({
     'address': dataTemp.country
@@ -183,46 +181,24 @@ function geocode(i, dataTemp) {
     gmapData.results[i].lon = results[0].geometry.location.lng();
     var marker = new google.maps.Marker({
                 position: (results[0].geometry.location),
-                map: map
+                map: map,
+                icon: "C:/Users/zhilabug/Documents/Rocketu/local.rocketu.com/NewsMapper/img/marker_icon.png"
 });
 google.maps.event.addListener(marker,
                 "click", function () {
-                    //Having the problem here. 
+ 
                     try {                 
-                  infowindow.setContent("<a href='" + gmapData.results[i].url + "'><img src='" + gmapData.results[i].multimedia[0].url + "'></a>" + "<h3>" + gmapData.results[i].title + "</h3><br><p>" + gmapData.results[i].published_date + "<br>" + gmapData.results[i].abstract + "<br>" + "<a href='" + gmapData.results[i].url + "'>Read the article</a>");
+                  infowindow.setContent("<div class='infoWindow'><a href='" + gmapData.results[i].url + "'><img src='" + gmapData.results[i].multimedia[0].url + "'></a>" + "<h4>" + gmapData.results[i].title + "</h4><br><p>" + gmapData.results[i].published_date + "<br>" + gmapData.results[i].abstract + "<br>" + "<a href='" + gmapData.results[i].url + "'>Read the article</a></div>");
                   } catch (a) {
-                     infowindow.setContent("<h3>" + gmapData.results[i].title + "</h3><br><p>" + gmapData.results[i].published_date + "<br>" + gmapData.results[i].abstract + "<br><a href='" + gmapData.results[i].url + "'>Read the article</a>");
+                     infowindow.setContent("<div class='infoWindow'><h4>" + gmapData.results[i].title + "</h4><br><p>" + gmapData.results[i].published_date + "<br>" + gmapData.results[i].abstract + "<br><a href='" + gmapData.results[i].url + "'>Read the article</a></div>");
                   }
                 infowindow.open(map, marker);
                             });
-/*        var marker = new google.maps.Marker({
-                position: (gmapData.results[i].lat, gmapData.results[i].lon),
-                map: map
-});
-        google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker)
-});
 
-
-    //console.log(gmapData.results[i].lat);
-   //console.log(gmapData.results[i].lon);*/
 } 
 });
 
-//plotMap (map, mapElement, gmapData);
-
 }
-   
-/*
-function plotMap (map, mapElement, gmapData){
-    console.log(gmapData.results[0].lat);
-        var marker = new google.maps.Marker({
-                position: (gmapData.results[0].lat, gmapData.results[0].lon),
-                map: map
-});
-        google.maps.event.addListener(marker, 'click', function() {
-    infowindow.open(map,marker)
-});
 
-}
-*/
+
+

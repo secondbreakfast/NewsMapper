@@ -3,37 +3,98 @@ body {
 	background-color: #021019;
 }
 
+.jumbotron {
+    margin: 30px;
+    margin-bottom: 60px;
+    background-image: url(../img/UNHCR_Nigeria_photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 650px;
+    color: #082D4B;
+}
+
+
+.intro-name {
+  background-color: rgba(255,255,255,0.45);
+  width: 45%;
+  height: 45%;
+  margin-top: 20px;
+  max-height: 100px;
+  border-radius: 15px;
+}
+
+.intro-button{
+  background-color: rgba(255,255,255,0.45);
+  width: 35%;
+  height: 35%;
+  margin-top: 350px;
+  max-height: 120px;
+  border-radius: 15px;
+}
+
+p {
+  font-size: 60px;
+}
+
+.page-type {
+  font-family: 'Overlock', cursive;
+  color: #082D4B;
+  text-align: center;
+
+}
+
+.btn-circle {
+  width: 55px;
+  height: 55px;
+  margin-top: 15px;
+  padding: 7px 16px;
+  border: 2px solid #082D4B;
+  border-radius: 35px;
+  font-size: 30px;
+  color: #082D4B;
+  background: 0 0;
+}
+
+.page-scroll .btn-circle i.animated {
+    -webkit-transition-property: -webkit-transform;
+    -webkit-transition-duration: 1s;
+    -moz-transition-property: -moz-transform;
+    -moz-transition-duration: 1s;
+}
+
+.page-scroll .btn-circle:hover i.animated {
+    -webkit-animation-name: pulse;
+    -moz-animation-name: pulse;
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+}
+
 .navbar {
   margin-bottom: 10px;
   color: #FFBB06;
   background-color: #082D4B;
+  min-height: 60px;
 }
 
 .navbar-brand {
   font-family: 'Megrim', cursive;
-  font-size: 50px;
+  font-size: 55px;
+  border-left: 20px;
 }
 
-
-.photocaption {
+.brand-heading {
   font-family: 'Overlock', cursive;
   color: #082D4B;
   text-align: center;
   font-size: 50px;
-  position: relative;
-  background-color: #bdbdbd; 
-}
-
-.btn-circle {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 7px 16px;
-  border: 2px solid #fff;
-  border-radius: 35px;
-  font-size: 40px;
-  color: #fff;
-  background: 0 0;
+  width: 35%;
+  height: 35%;
+  max-height: 60px;
+  background-color: rgba(255,255,255,0.3);
 }
 
 #map { 
@@ -48,20 +109,22 @@ a {
     -moz-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
 }
-p {
-	color: #b26c00;
-}
 
-
-/* Set the fixed height of the footer here */
 #push,
 .footer {
-  height: 30px;
+  height: 40px;
 }
 .footer {
+   font-family: 'Megrim', cursive;
+  font-size: 30px;
+  text-align: center;
   background-color: #082D4B;
   color: #FFBB06;
   margin-top: 10px;
+  word-spacing: 15px;
 }
 
-}
+ .fa {
+  padding: 1
+  0px;
+ }
