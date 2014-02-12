@@ -100,7 +100,7 @@ body {
 #map { 
 	height: 550px; 
 	width: 1140px;
-  float: none;
+/*  float: none;*/
   margin: 0 auto;
 }
 
