@@ -182,7 +182,7 @@ function geocode(i, dataTemp) {
     var marker = new google.maps.Marker({
                 position: (results[0].geometry.location),
                 map: map,
-                icon: "C:/Users/zhilabug/Documents/Rocketu/local.rocketu.com/NewsMapper/img/marker_icon.png"
+                icon: "C:/Users/zhilabug/Documents/Rocketu/local.rocketu.com/NewsMapper/img/marker_icon.jpg"
 });
 google.maps.event.addListener(marker,
                 "click", function () {
