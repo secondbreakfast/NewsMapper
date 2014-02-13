@@ -25,6 +25,15 @@
  </head>
 
  <body>
+  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=556126794479025";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
   <div class="container">
 <!--     <div class="jumbocontainer"> -->
     <div class="jumbotron text-center">
@@ -49,8 +58,12 @@
 
 </div>
         <div>
-         <i class="fa fa-facebook-square fa-3x pull-right"></i>
-        <i class="fa fa-twitter fa-3x pull-right"></i>
+<!--          <i class="fa fa-facebook-square fa-3x pull-right"></i>
+        <i class="fa fa-twitter fa-3x pull-right"></i> -->
+    <div class="fb-share-button" data-href="http://newsmapper-is-awesome.herokuapp.com/" data-type="icon"></div>
+            <a href="https://twitter.com/share" class="twitter-share-button pull-right" data-url="http://newsmapper-is-awesome.herokuapp.com/" data-text="Check out this really cool site!" data-via="zhilabug" data-count="none" data-hashtags="dataisawesome">Tweet</a>
+            
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
       </div>
 
 </div>
