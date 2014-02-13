@@ -7,22 +7,28 @@ body {
     margin: 30px;
     margin-bottom: 60px;
     background-image: url(../img/UNHCR_Nigeria_photo.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 650px;
     color: #082D4B;
 }
 
+img {
+  max-width: none; 
+}
+
+
 h1{
    text-align: center; 
-   margin-left: 12px;
+   margin-left: 40px;
+   vertical-align: center;
 }
-/*Couldn't get this to line up with center. */
+
 .intro-name {
   background-color: rgba(255,255,255,0.45);
   width: 45%;
   height: 45%;
-  margin-top: 20px;
+  margin-top: 10px;
   height: 100px;
   border-radius: 15px;
 }
@@ -102,6 +108,17 @@ h1{
   height: 60px;
   background-color: rgba(255,255,255,0.3);
 }
+.social-media {
+  padding: 10px;
+}
+
+.twitter-share-button {
+  margin-top: 10px;
+}
+
+.google-map-canvas,
+.google-map-canvas * {.box-sizing(content-box);}
+
 
 #map { 
 	height: 550px; 
@@ -111,21 +128,28 @@ h1{
 }
 
 
-#push,
-.footer {
-  height: 40px;
+#push, .footer {
+  
 }
-.footer {
+
+.footer-div {
    font-family: 'Megrim', cursive;
   font-size: 30px;
   text-align: center;
   background-color: #082D4B;
   color: #FFBB06;
-  margin-top: 10px;
+  margin-top: 15px;
   word-spacing: 15px;
+  min-height: 40px;
 }
 
  .fa {
   padding: 1
   0px;
  }
+
+@media only screen and (max-device-width: 480px) {
+    .footer-div {
+        height: auto;
+    }
+}
