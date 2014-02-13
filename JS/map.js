@@ -182,7 +182,7 @@ function geocode(i, dataTemp) {
     var marker = new google.maps.Marker({
                 position: (results[0].geometry.location),
                 map: map,
-                icon: "C:/Users/zhilabug/Documents/Rocketu/local.rocketu.com/NewsMapper/img/marker_icon.png"
+                icon: "C:/Users/zhilabug/Documents/Rocketu/local.rocketu.com/NewsMapper/img/marker_icon.jpg"
 });
 google.maps.event.addListener(marker,
                 "click", function () {
@@ -200,5 +200,13 @@ google.maps.event.addListener(marker,
 
 }
 
-
-
+//jQuery for page scrolling feature - requires jQuery Easing plugin
+$(function() {
+    $('.page-scroll a').bind('click', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+});
