@@ -217,7 +217,7 @@ function geocode(i, dataTemp) {
     var marker = new google.maps.Marker({
                 position: (results[0].geometry.location),
                 map: map,
-                icon: "C:/Users/zhilabug/Documents/Rocketu/local.rocketu.com/NewsMapper/img/marker_icon.png"
+                icon: "https://s3-us-west-2.amazonaws.com/awesomez/marker_icon.png"
 });
 google.maps.event.addListener(marker,
                 "click", function () {
